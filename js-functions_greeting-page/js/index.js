@@ -41,10 +41,11 @@ function getGreeting() {
 //Alternative: drei mal if und dann nur return
 console.log(new Date().getDay());
 function getDayColor() {
-  const currentDay = 1;
+  const currentDay = new Date().getDay();
   if(currentDay===1) {
     return document.body.style.backgroundColor = "darkgray";
 }
+//alternativ:   if (typeOfDay === 2 || typeOfDay === 3 || typeOfDay === 4 || typeOfDay === 5)
   if(currentDay>=2 && currentDay<=5) {
     return document.body.style.backgroundColor = "lightblue";
   }
@@ -54,3 +55,4 @@ function getDayColor() {
 }
 display.textContent = getGreeting();
 document.body.style.backgroundColor = getDayColor();
+
